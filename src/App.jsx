@@ -8,16 +8,18 @@ import Sideb from "./components/Sideb";
 import PostListProvider from "./store/post-list-store";
 
 function App() {
-  const [selectedTab, setSelectedTab] = useState("Home");
+  const [selectedTab, setSelectedTab] = useState("Create Post");
 
   return (
     <PostListProvider>
-      <div className="app-container">
-        <Sideb selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-        <div className="content">
-          <Header />
-          {selectedTab === "Home" ? <PostList /> : <CreatePost />}
-          <Footer />
+      <div className="bgg">
+        <div className="app-container">
+          <Sideb selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+          <div className="content">
+            <Header />
+            {selectedTab === "Home" ? <PostList /> : <CreatePost />}
+            <Footer />
+          </div>
         </div>
       </div>
     </PostListProvider>

@@ -53,23 +53,6 @@ const PostListProvider = ({ children }) => {
   );
 };
 
-const DEFAULT_POST_LIST = [
-  {
-    id: "1",
-    title: "Going To Mumbai",
-    body: "Hi friends I am going to Mumbai for my vacation",
-    reactions: 2,
-    userid: "user-9",
-    tags: ["vacation", "mumbai"],
-  },
-  {
-    id: "2",
-    title: "Pass Pass",
-    body: "Masti masti dull masti",
-    reactions: 12,
-    userid: "user-10",
-    tags: ["graduating", "bombay"],
-  },
-];
+const DEFAULT_POST_LIST = [];
 
 export default PostListProvider;

@@ -1,5 +1,13 @@
+.bgg {
+  background-image: url('./assets/img4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /* Ensure the background covers the entire viewport height */
+}
 .app-container {
   display: flex;
+  
 }
 
 .content {
@@ -27,3 +35,20 @@
   margin-top: 50px;
   margin-left: 10%;
 }
+
+.form-label {
+  color: white;
+  /* background-color: #85929E;  */
+  /* padding: 4px 8px;  */
+  border-radius: 4px;
+  font-size: 14px; /* Set the font size */
+  font-weight: 500;  /* Adjust the value as needed */
+}
+
+.footer-names {
+  font-size: 15px; /* Set the font size */
+  font-weight: 500;
+  /* display: inline-block; */
+  background-color: rgba(255, 255, 255, 0.7);
+}
+

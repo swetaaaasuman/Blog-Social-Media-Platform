@@ -2,36 +2,53 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div class="container">
-      <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">
+    <div className="container">
+      <footer className="py-3 my-4">
+        <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+          <li className="nav-item footer-names">
+            <a
+              href="#"
+              className="nav-link px-2 text-body-secondary footer-names"
+            >
               Home
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">
+          <li className="nav-item footer-names">
+            <a
+              href="#"
+              className="nav-link px-2 text-body-secondary footer-names"
+            >
               Features
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">
+          <li className="nav-item footer-names">
+            <a
+              href="#"
+              className="nav-link px-2 text-body-secondary footer-names"
+            >
               Pricing
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">
+          <li className="nav-item footer-names">
+            <a
+              href="#"
+              className="nav-link px-2 text-body-secondary footer-names"
+            >
               FAQs
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">
+          <li className="nav-item footer-names">
+            <a
+              href="#"
+              className="nav-link px-2 text-body-secondary footer-names"
+            >
               About
             </a>
           </li>
         </ul>
-        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        <p className="text-center text-body-secondary footer-names">
+          © 2024 Company, Inc
+        </p>
       </footer>
     </div>
   );
