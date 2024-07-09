@@ -18,13 +18,16 @@ const Post = ({ post }) => {
           </span>
         </h5>
         <p className="card-text">{post.body}</p>
+        {/* Render tags */}
         {post.tags.map((tag) => (
           <span key={tag} className="badge text-bg-primary hashtag">
             {tag}
           </span>
         ))}
+        {/* Updated rendering of reactions to avoid rendering object directly */}
         <div className="alert alert-success reactions" role="alert">
-          This post has been reacted by {post.reactions} people.
+          This post has {post.reactions.likes} likes and{" "}
+          {post.reactions.dislikes} dislikes.
         </div>
       </div>
     </div>
