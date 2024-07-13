@@ -8,26 +8,32 @@ const Post = ({ post }) => {
   return (
     <div className="card post-card" style={{ width: "30rem" }}>
       <div className="card-body">
-        <h5 className="card-title">
+        <h5 className="card-title d-flex justify-content-between align-items-center">
           {post.title}
-          <span
-            className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          <button
+            className="btn btn-danger"
+            aria-label="Delete post"
             onClick={() => deletePost(post.id)}
           >
             <AiFillDelete />
-          </span>
+          </button>
         </h5>
         <p className="card-text">{post.body}</p>
-        {/* Render tags */}
-        {post.tags.map((tag) => (
-          <span key={tag} className="badge text-bg-primary hashtag">
-            {tag}
-          </span>
-        ))}
-        {/* Updated rendering of reactions to avoid rendering object directly */}
+        {post.tags && post.tags.length > 0 && (
+          <div className="tags">
+            {post.tags.map((tag, index) => (
+              <span
+                key={`${post.id}-${tag}-${index}`}
+                className="badge text-bg-primary hashtag"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <div className="alert alert-success reactions" role="alert">
-          This post has {post.reactions.likes} likes and{" "}
-          {post.reactions.dislikes} dislikes.
+          This post has {post.reactions?.likes || 0} likes and{" "}
+          {post.reactions?.dislikes || 0} dislikes.
         </div>
       </div>
     </div>
